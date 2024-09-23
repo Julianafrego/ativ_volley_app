@@ -1,61 +1,51 @@
 import 'package:flutter/material.dart';
 import '../main.dart';
 
-
 class TeamWidget extends StatelessWidget {
   final String teamName; // string que receberá o nome do time
-  const TeamWidget({super.key, required this.teamName});
+  final String teamNumPlayers; // string que receberá o número de jogadores
+  const TeamWidget(
+      {super.key, required this.teamName, required this.teamNumPlayers});
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.end,
-      children: [
-        Text(
-          teamName,
-          style: const TextStyle(
-            fontSize: 40,
-            color: MyColors.yellow,
-            fontFamily: 'Concert One',
+    return Container(
+      padding: const EdgeInsets.all(10),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          Text(
+            teamName,
+            style: const TextStyle(
+              fontSize: 30,
+              color: MyColors.yellow,
+              fontFamily: 'Concert One',
+            ),
           ),
-        ),
-        const SizedBox(width: 15),
-        const CountPlayersWidget(),
-      ],
-    );
-  }
-}
-
-class CountPlayersWidget extends StatelessWidget {
-  const CountPlayersWidget({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Row(
-      mainAxisAlignment: MainAxisAlignment.end,
-      children: [
-        Text(
-          '4',
-          style: TextStyle(
-            height: 0.8,
-            fontFamily: 'Concert One',
-            fontSize: 60,
-            fontWeight: FontWeight.bold,
-            color: MyColors.blue1,
-          ),
-        ),
-        RotatedBox(
-          quarterTurns: 3, // Rotaciona ou -90 graus
-          child: Text(
-            'Jogadores',
-            style: TextStyle(
-              fontSize: 9,
+          const SizedBox(width: 15),
+          Text(
+            teamNumPlayers,
+            style: const TextStyle(
+              height: 0.8,
+              fontFamily: 'Concert One',
+              fontSize: 60,
               fontWeight: FontWeight.bold,
               color: MyColors.blue1,
             ),
           ),
-        ),
-      ],
+          const RotatedBox(
+            quarterTurns: 3, // Rotaciona o texto para ficar na vertical
+            child: Text(
+              'Jogadores',
+              style: TextStyle(
+                fontSize: 9,
+                fontWeight: FontWeight.bold,
+                color: MyColors.blue1,
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

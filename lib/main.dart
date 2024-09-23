@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
-import 'teams.dart';
+import 'widgets/team.dart';
+import 'widgets/teamlist.dart';
+import 'widgets/cabecalho.dart';
+import 'widgets/buttons.dart';
+
+import 'widgets.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,91 +23,35 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false, // Remove o banner "Debug"
 
       home: Scaffold(
         backgroundColor: MyColors.blue2,
         body: Center(
-            child: Stack(
-          children: <Widget>[
+            child: Column(
+          children: [
             Padding(
               padding: EdgeInsets.symmetric(vertical: 20),
-              child: TopWidget(),
+              child: CabecalhoWidget(),
             ),
-            Padding(
-              padding: EdgeInsets.symmetric(vertical: 120),
-              child: TeamsContainer(),
-            ),
+
+            // add spacer, para termos espaços que se adaptem a diferentes
+            // tamanhos de telas, e termos um app responsivel
+            const Spacer(flex: 2),
+            TeamsContainer(), // esse será um componente centralizado
+
+            const Spacer(flex: 2),
+
+            InitialButtons(),
+
+            const Spacer(flex: 5),
           ],
         )),
+        floatingActionButton: const AddButton(),
+        floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+        // botao ficará ao final da nossa tela
       ),
-    );
-  }
-}
-
-/////////
-
-class TopWidget extends StatelessWidget {
-  const TopWidget({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Align(
-      alignment: Alignment.topCenter,
-      child: Container(
-        margin: const EdgeInsets.only(right: 60),
-        width: 300,
-        height: 140,
-        child: Row(
-          children: [
-            Transform.translate(
-              offset: Offset(30, -20),
-              child: Image.asset(
-                './assets/ball.png',
-                width: 130,
-                height: 130,
-              ),
-            ),
-            Expanded(
-              child: const TopTitle(), // O título usará o espaço restante
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class TopTitle extends StatelessWidget {
-  const TopTitle({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Text(
-          'Volley',
-          style: TextStyle(
-            fontFamily: 'ConcertOne',
-            fontSize: 60,
-            fontWeight: FontWeight.bold,
-            color: Colors.white,
-          ),
-        ),
-        Transform.translate(
-          offset: Offset(-14, -20),
-          child: Text(
-            'do fim de semana',
-            style: TextStyle(
-              fontFamily: 'ConcertOne',
-              fontSize: 13,
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
-            ),
-          ),
-        ),
-      ],
     );
   }
 }
