@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'widgets/team.dart';
-import 'widgets/teamlist.dart';
-import 'widgets/cabecalho.dart';
 import 'widgets/buttons.dart';
 
 import 'widgets.dart';
@@ -38,17 +35,18 @@ class MyApp extends StatelessWidget {
 
             // add spacer, para termos espaços que se adaptem a diferentes
             // tamanhos de telas, e termos um app responsivel
-            const Spacer(flex: 2),
+            Spacer(flex: 2),
+            
             TeamsContainer(), // esse será um componente centralizado
 
-            const Spacer(flex: 2),
+            Spacer(flex: 2),
 
             InitialButtons(),
 
-            const Spacer(flex: 5),
+            Spacer(flex: 5),
           ],
         )),
-        floatingActionButton: const AddButton(),
+        floatingActionButton: AddButton(),
         floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
         // botao ficará ao final da nossa tela
       ),

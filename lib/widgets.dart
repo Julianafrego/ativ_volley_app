@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'main.dart';
-import 'widgets/team.dart';
 import 'widgets/teamlist.dart';
 import 'widgets/buttons.dart';
 import 'widgets/cabecalho.dart';
