@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
 import 'homepagewidgets/teamlist.dart';
 import 'homepagewidgets/buttons.dart';
 import 'homepagewidgets/cabecalho.dart';
+import 'package:flutter/material.dart';
 
 class CabecalhoWidget extends StatelessWidget {
   const CabecalhoWidget({super.key});
