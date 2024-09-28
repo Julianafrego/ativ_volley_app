@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class teamActionsWidget extends StatelessWidget {
-  const teamActionsWidget({super.key});
+class TeamActionsWidget extends StatelessWidget {
+  const TeamActionsWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

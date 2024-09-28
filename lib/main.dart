@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'widgets/buttons.dart';
+import 'homepagewidgets/buttons.dart';
 
 import 'widgets.dart';
 
@@ -8,11 +8,13 @@ void main() {
 }
 
 class MyColors {
-  static const Color blue1 = Color(0xFF2C4C8C);
-  static const Color blue2 = Color(0xFF08ADC4);
+  static const Color blue1 = Color(0xff2B4A8E);
+  static const Color blue2 = Color(0xFF08ADC3);
   static const Color blue3 = Color(0xFF77D4DC);
-  static const Color yellow = Color(0xFFF2C438);
   static const Color green = Color(0xFF7CBC74);
+  static const Color yellow = Color(0xFFF2C438);
+  static const Color laranja = Color(0xffF77859);
+  static const Color branco = Color(0xffC2F2F8);
 }
 
 class MyApp extends StatelessWidget {
@@ -20,10 +22,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false, // Remove o banner "Debug"
-
-      home: Scaffold(
+      theme: ThemeData(
+        fontFamily: 'Concert One',
+        dialogBackgroundColor: MyColors.blue2,
+      ),
+      home: const Scaffold(
         backgroundColor: MyColors.blue2,
         body: Center(
             child: Column(
@@ -36,7 +41,7 @@ class MyApp extends StatelessWidget {
             // add spacer, para termos espaços que se adaptem a diferentes
             // tamanhos de telas, e termos um app responsivel
             Spacer(flex: 2),
-            
+
             TeamsContainer(), // esse será um componente centralizado
 
             Spacer(flex: 2),

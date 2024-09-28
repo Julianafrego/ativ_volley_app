@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../main.dart';
+import 'package:ativ_volley_app/game.dart';
 
 class JogoCasadoButton extends StatelessWidget {
   const JogoCasadoButton({super.key});
@@ -47,7 +48,12 @@ class IniciarButton extends StatelessWidget {
             ),
           ),
         ),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const gameWidget()),
+          );
+        },
         child: const Text(
           'Iniciar',
           style: TextStyle(

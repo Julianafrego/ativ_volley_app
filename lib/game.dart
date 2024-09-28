@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:ativ_volley_app/gamewidgets/teamactions.dart';
+import 'gamewidgets/teamsactions.dart';
 
 class gameWidget extends StatelessWidget {
   const gameWidget({super.key});
@@ -24,7 +24,7 @@ class gameWidget extends StatelessWidget {
           child: Container(
             child: const Column(
               children: [
-                teamActionsWidget(),
+                TeamActionsWidget(),
               ],
             ),
           ),
