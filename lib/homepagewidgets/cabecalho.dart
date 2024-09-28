@@ -16,15 +16,15 @@ class TopWidget extends StatelessWidget {
         child: Row(
           children: [
             Transform.translate(
-              offset: Offset(30, -20),
+              offset: const Offset(30, -20),
               child: Image.asset(
                 './assets/ball.png',
                 width: 130,
                 height: 130,
               ),
             ),
-            Expanded(
-              child: const TopTitle(), // O título usará o espaço restante
+            const Expanded(
+              child: TopTitle(), // O título usará o espaço restante
             ),
           ],
         ),
@@ -40,7 +40,7 @@ class TopTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Text(
+        const Text(
           'Volley',
           style: TextStyle(
             fontFamily: 'ConcertOne',
@@ -50,8 +50,8 @@ class TopTitle extends StatelessWidget {
           ),
         ),
         Transform.translate(
-          offset: Offset(-14, -20),
-          child: Text(
+          offset: const Offset(-14, -20),
+          child: const Text(
             'do fim de semana',
             style: TextStyle(
               fontFamily: 'ConcertOne',
