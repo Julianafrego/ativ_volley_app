@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import '../main.dart';
+import 'package:ativ_volley_app/core/system_colors.dart';
 
-class TeamWidget extends StatelessWidget {
+
+class TeamScore extends StatelessWidget {
   final String teamName; // string que receberá o nome do time
   final String teamNumPlayers; // string que receberá o número de jogadores
-  const TeamWidget(
+  const TeamScore(
       {super.key, required this.teamName, required this.teamNumPlayers});
 
   @override
@@ -18,7 +19,7 @@ class TeamWidget extends StatelessWidget {
             teamName,
             style: const TextStyle(
               fontSize: 30,
-              color: MyColors.yellow,
+              color: SystemColors.yellow,
               fontFamily: 'Concert One',
             ),
           ),
@@ -30,7 +31,7 @@ class TeamWidget extends StatelessWidget {
               fontFamily: 'Concert One',
               fontSize: 60,
               fontWeight: FontWeight.bold,
-              color: MyColors.blue1,
+              color: SystemColors.blue1,
             ),
           ),
           const RotatedBox(
@@ -40,7 +41,7 @@ class TeamWidget extends StatelessWidget {
               style: TextStyle(
                 fontSize: 9,
                 fontWeight: FontWeight.bold,
-                color: MyColors.blue1,
+                color: SystemColors.blue1,
               ),
             ),
           ),
