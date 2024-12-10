@@ -37,10 +37,10 @@ class TeamsBScoreboard extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            TeamBScoreboard(teamName: 'Sparrings', teamScore: 25),
+            TeamBScoreboard(teamName: 'Sparrings', teamScore: 10),
             TeamBScoreboard(teamName: 'Sicranos', teamScore: 10),
             TeamBScoreboard(teamName: 'AutoConvidados', teamScore: 25),
-            TeamBScoreboard(teamName: 'autoconvidados', teamScore: 5),
+            TeamBScoreboard(teamName: 'autoconvidados', teamScore: 10),
           ],
         ));
   }
