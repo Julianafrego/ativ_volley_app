@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ativ_volley_app/core/system_colors.dart';
-
+import 'package:ativ_volley_app/presentation/screens/home_screen.dart'; 
 
 class ReturnButton extends StatelessWidget {
   const ReturnButton({super.key});
@@ -8,13 +8,20 @@ class ReturnButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return IconButton(
-        style: ButtonStyle(
-          iconSize: WidgetStateProperty.all<double>(40.0),
-          foregroundColor: WidgetStateProperty.all<Color>(SystemColors.branco),
-        ),
-        onPressed: () {
-          Navigator.of(context).pop();
-        },
-        icon: const BackButton());
+      iconSize: 40.0, 
+      color: SystemColors.branco, 
+      onPressed: () {
+        if (Navigator.canPop(context)) {
+          Navigator.of(context).pop(); 
+        } else {
+          // Redireciona para a HomeScreen quando a pilha de navegação estiver vazia
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(builder: (context) => const HomeScreen()),  
+          );
+        }
+      },
+      icon: const Icon(Icons.arrow_back),
+    );
   }
 }

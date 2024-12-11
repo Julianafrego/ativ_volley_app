@@ -34,7 +34,7 @@ class TopWidget extends StatelessWidget {
               ),
             ),
             const Expanded(
-              child: TopTitle(), // O título usará o espaço restante
+              child: TopTitle(), 
             ),
           ],
         ),

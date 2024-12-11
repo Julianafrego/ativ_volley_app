@@ -16,6 +16,7 @@ class TeamActionAWidget extends StatelessWidget {
         children: [
           AddButton(
             onPressed: sumPoints,
+            heroTag: false,
           ),
           Text(
             actionName,
@@ -54,6 +55,7 @@ class TeamActionBWidget extends StatelessWidget {
           ),
           AddButton(
             onPressed: sumPoints,
+            heroTag: false,
           ),
         ],
       ),

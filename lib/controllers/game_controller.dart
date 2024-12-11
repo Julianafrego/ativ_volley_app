@@ -8,6 +8,9 @@ class GameController {
   int seconds = 0;
   bool isTimerRunning = false;
   late Timer _timer;
+  
+
+  String ballPosition = 'A';
 
   void startTimer(VoidCallback updateUI) {
     isTimerRunning = true;
@@ -23,7 +26,9 @@ class GameController {
       isTimerRunning = false;
     }
   }
- void increasePointsA(VoidCallback updateUI, BuildContext context) {
+
+  void increasePointsA(VoidCallback updateUI, BuildContext context) {
+    ballPosition = "A";
     pointsA++;
     updateUI();
     verificarVitoria(context, updateUI);
@@ -31,15 +36,18 @@ class GameController {
 
   // Incrementa os pontos do Time B
   void increasePointsB(VoidCallback updateUI, BuildContext context) {
+    ballPosition = "B";
     pointsB++;
     updateUI();
     verificarVitoria(context, updateUI);
   }
- // Reinicia o jogo
+
+  // Reinicia o jogo
   void resetGame(VoidCallback updateUI) {
     pointsA = 0;
     pointsB = 0;
     seconds = 0;
+    ballPosition = 'A';
     updateUI();
   }
 

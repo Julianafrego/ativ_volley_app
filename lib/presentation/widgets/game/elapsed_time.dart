@@ -25,6 +25,13 @@ class ElapsedTime extends StatelessWidget {
             color: SystemColors.branco,
           ),
         ),
+         Text(
+          '’00’’',
+          style: const TextStyle(
+            fontSize: 20,
+            color: SystemColors.branco,
+          ),
+        ),
       ],
     );
   }

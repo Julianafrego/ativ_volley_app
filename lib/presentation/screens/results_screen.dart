@@ -3,7 +3,6 @@ import 'package:ativ_volley_app/presentation/widgets/results/scoreboard.dart';
 import 'package:flutter/material.dart';
 import 'package:ativ_volley_app/core/system_colors.dart';
 import 'package:ativ_volley_app/core/buttons/return_button.dart';
-import 'package:ativ_volley_app/presentation/widgets/results/teams_scoreboard.dart';
 
 class ResultsScreen extends StatefulWidget {
   const ResultsScreen({super.key});
@@ -24,8 +23,8 @@ class _ResultsScreenState extends State<ResultsScreen> {
         title: const Text(
           'Placar Geral',
           style: TextStyle(
-            fontSize: 24,
-            color: SystemColors.branco,
+            fontSize: 40,
+            color: SystemColors.blue1,
           ),
         ),
         centerTitle: true,
@@ -48,18 +47,18 @@ class _ResultsScreenState extends State<ResultsScreen> {
                         children: [
                           SizedBox(height: screenHeight),
                           const Icon(Icons.bar_chart,
-                              size: 37, color: Colors.white),
+                              size: 35, color: Colors.white),
                           const Icon(Icons.bar_chart,
-                              size: 37, color: Colors.white),
+                              size: 35, color: Colors.white),
                           const Icon(Icons.bar_chart,
-                              size: 37, color: Colors.white),
+                              size: 35, color: Colors.white),
                           const Icon(Icons.bar_chart,
-                              size: 37, color: Colors.white),
+                              size: 35, color: Colors.white),
                         ],
                       ),
                     )),
                 const Flexible(
-                  flex: 8,
+                  flex: 9,
                   child: Scoreboard(),
                 ),
                 Flexible(
@@ -73,28 +72,28 @@ class _ResultsScreenState extends State<ResultsScreen> {
                           const Text(
                             '0:24’90’’',
                             style: TextStyle(
-                              fontSize: 24,
+                              fontSize: 22,
                               color: Colors.white,
                             ),
                           ),
                           const Text(
                             '0:14’23’’',
                             style: TextStyle(
-                              fontSize: 24,
+                              fontSize: 22,
                               color: Colors.white,
                             ),
                           ),
                           const Text(
                             '0:35’04’’',
                             style: TextStyle(
-                              fontSize: 24,
+                              fontSize: 22,
                               color: Colors.white,
                             ),
                           ),
                           const Text(
                             '0:11’29’’',
                             style: TextStyle(
-                              fontSize: 24,
+                              fontSize: 22,
                               color: Colors.white,
                             ),
                           ),

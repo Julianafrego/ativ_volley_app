@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ativ_volley_app/core/system_colors.dart';
 import 'package:ativ_volley_app/presentation/screens/results_screen.dart';
-
+import 'package:ativ_volley_app/core/buttons/minor_standard_button.dart';
 
 class VictoryDialog {
   static void showVictoryDialog(BuildContext context, String vencedor,
@@ -13,9 +13,9 @@ class VictoryDialog {
         double screenHeight = MediaQuery.of(context).size.height;
 
         return Dialog(
-          backgroundColor: const Color.fromARGB(158, 239, 249, 252),
+          backgroundColor: const Color.fromARGB(158, 170, 246, 248),
           child: SizedBox(
-            width: screenWidth * 0.8,
+            width: screenWidth * 0.7,
             height: screenHeight * 0.7,
             child: Column(
               mainAxisSize: MainAxisSize.min,
@@ -30,66 +30,52 @@ class VictoryDialog {
                       color: SystemColors.blue1),
                 ),
                 const SizedBox(height: 20),
-                Text(
-                  '$vencedor',
-                  textAlign: TextAlign.center,
-                  style: const TextStyle(fontSize: 70, color: SystemColors.blue1),
-                ),
-                const Text('Venceu',
-                    textAlign: TextAlign.end,
-                    style: TextStyle(fontSize: 24, color: SystemColors.blue1)),
-                const SizedBox(height: 20),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                Stack(
+                  alignment: Alignment.centerLeft,
                   children: [
-                    TextButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const ResultsScreen(),
-                          ),
-                        );
-                        resetGame();
-                      },
-                      style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.all<Color>(SystemColors.blue1),
-                        foregroundColor:
-                            MaterialStateProperty.all<Color>(SystemColors.branco),
-                        shape:
-                            MaterialStateProperty.all<RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8),
-                            side: const BorderSide(color: Colors.white, width: 2),
-                          ),
-                        ),
-                      ),
-                      child: const Text('Terminar'),
+                    Text(
+                      '$vencedor',
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(
+                          fontSize: 70, color: SystemColors.blue1),
                     ),
-                    const SizedBox(width: 20),
-                    TextButton(
-                      style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.all<Color>(SystemColors.blue1),
-                        foregroundColor:
-                            MaterialStateProperty.all<Color>(SystemColors.yellow),
-                        shape:
-                            MaterialStateProperty.all<RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8),
-                            side: const BorderSide(color: Colors.white, width: 2),
-                          ),
-                        ),
+                    const Positioned(
+                      right: 0,
+                      top: 73,
+                      child: Text('Venceu',
+                          textAlign: TextAlign.end,
+                          style: TextStyle(
+                              fontSize: 24, color: SystemColors.blue1)),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 20),
+                Expanded(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      MinorStandardButton(
+                        text: 'Terminar',
+                        onPressed: () {
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    const ResultsScreen()),
+                          );
+                        },
                       ),
-                      onPressed: () {
+                      const SizedBox(width: 5),
+                      MinorStandardButton(
+                        text: 'Novo Set',
+                        onPressed: () {
                         resetGame();
                         Navigator.of(context).pop(); // Fecha o diálogo
                          // Reinicia o jogo
                       },
-                      child: const Text('Novo Set'),
-                    ),
-                  ],
+                      color: ButtonColor.yellowText),
+                    ],
+                  ),
                 ),
               ],
             ),
@@ -99,4 +85,3 @@ class VictoryDialog {
     );
   }
 }
-

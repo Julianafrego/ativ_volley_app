@@ -3,17 +3,21 @@ import 'package:ativ_volley_app/core/system_colors.dart';
 
 class AddButton extends StatelessWidget {
   final VoidCallback? onPressed;
-  const AddButton({super.key, this.onPressed});
+  final Object? heroTag;
+
+  const AddButton({super.key, this.onPressed, this.heroTag});
+
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(left: 7, right: 15),
-      child: TextButton(
-        style: TextButton.styleFrom(
-          backgroundColor: SystemColors.blue1, 
-          shape: const CircleBorder(), // Mantém a forma circular
-        ),
+      child: FloatingActionButton(
         onPressed: onPressed,
+        heroTag: heroTag, 
+        backgroundColor: SystemColors.blue1,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(50), 
+        ),
         child: const Text(
           '+',
           style: TextStyle(

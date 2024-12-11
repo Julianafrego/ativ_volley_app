@@ -6,7 +6,6 @@ import 'package:ativ_volley_app/presentation/widgets/home/initial_buttons.dart';
 import 'package:ativ_volley_app/presentation/widgets/home/team_details_list.dart';
 import 'package:flutter/material.dart';
 
-
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -46,7 +45,7 @@ class HomeScreenState extends State<HomeScreen> {
 
               Spacer(flex: 2),
 
-              TeamsContainer(), // centralizado
+              TeamsContainer(), 
 
               Spacer(flex: 2),
 
@@ -56,7 +55,9 @@ class HomeScreenState extends State<HomeScreen> {
             ],
           ),
         ),
-        floatingActionButton: AddButton(),
+        floatingActionButton: AddButton(
+          heroTag: null, 
+        ),
         floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
       ),
     );

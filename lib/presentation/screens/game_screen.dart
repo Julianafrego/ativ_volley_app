@@ -83,7 +83,7 @@ class GameScreenState extends State<GameScreen> {
                   Padding(
                     padding: EdgeInsets.only(
                         top: MediaQuery.of(context).size.height *
-                            0.10), // 10% da altura da tela
+                            0.10),
                     child: TeamActionsListA(
                       increasePointsA: () {
                         _controller.increasePointsA(
@@ -106,6 +106,7 @@ class GameScreenState extends State<GameScreen> {
                       Scoreboard(
                         pointsA: _controller.pointsA,
                         pointsB: _controller.pointsB,
+                        gameController: _controller,
                       ),
                       ElapsedTime(
                         seconds: _controller.seconds,
@@ -138,7 +139,7 @@ class GameScreenState extends State<GameScreen> {
                     Padding(
                       padding: EdgeInsets.only(
                           top: MediaQuery.of(context).size.height *
-                              0.10), // 10% da altura da tela),
+                              0.10), 
                       child: TeamActionsListB(
                         increasePointsB: () {
                           _controller.increasePointsB(

@@ -23,7 +23,7 @@ class TeamAScoreboard extends StatelessWidget {
         Text(
             teamName,
             style: const TextStyle(
-              fontSize: 24,
+              fontSize: 20,
               color: SystemColors.branco,
             ),
           ),
@@ -69,7 +69,7 @@ class TeamBScoreboard extends StatelessWidget {
         Text(
           teamName,
           style: const TextStyle(
-            fontSize: 24,
+            fontSize: 20,
             color: SystemColors.branco,
           ),
         ),

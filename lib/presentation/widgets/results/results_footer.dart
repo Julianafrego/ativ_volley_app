@@ -7,8 +7,8 @@ class ResultsFooter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width, // Largura total da tela
-      padding: const EdgeInsets.only(top: 9.0), // Ajuste de padding
+      width: MediaQuery.of(context).size.width, 
+      padding: const EdgeInsets.only(top: 9.0), 
       decoration: BoxDecoration(
         color: SystemColors.blue3,
         shape: BoxShape.rectangle,
@@ -21,25 +21,45 @@ class ResultsFooter extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16.0), // Espaçamento
-            child: Text(
-              'Sicranos: 10',
+            padding: EdgeInsets.symmetric(horizontal: 16.0), 
+            child: 
+            Row ( children: [
+                Text(
+              'Sicranos: ',
               style: TextStyle(fontSize: 24, color: SystemColors.branco),
             ),
+             Text(
+              '10',
+              style: TextStyle(fontSize: 24, color: SystemColors.blue1),
+            ),
+            ],),
+           
           ),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16.0), // Espaçamento
-            child: Text(
-              'Autoconvidados: 10',
+            padding: EdgeInsets.symmetric(horizontal: 16.0), 
+            child:  Row ( children: [
+                Text(
+              'Autoconvidados: ',
               style: TextStyle(fontSize: 24, color: SystemColors.branco),
             ),
+             Text(
+              '10',
+              style: TextStyle(fontSize: 24, color: SystemColors.blue1),
+            ),
+            ],),
           ),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16.0), // Espaçamento
-            child: Text(
-              'Ziraldos: 3',
+            padding: EdgeInsets.symmetric(horizontal: 16.0), 
+            child:  Row ( children: [
+                Text(
+              'Ziraldos: ',
               style: TextStyle(fontSize: 24, color: SystemColors.branco),
             ),
+             Text(
+              '3',
+              style: TextStyle(fontSize: 24, color: SystemColors.blue1),
+            ),
+            ],),
           ),
         ],
       ),

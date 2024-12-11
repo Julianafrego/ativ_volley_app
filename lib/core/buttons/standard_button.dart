@@ -18,10 +18,10 @@ class StandardButton extends StatelessWidget {
           backgroundColor: WidgetStateProperty.all<Color>(SystemColors.blue1),
           shape: WidgetStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(8), // Define o raio da borda
+              borderRadius: BorderRadius.circular(8), 
               side: const BorderSide(
                   color: Colors.white,
-                  width: 2), // Borda branca com largura de 2
+                  width: 2), 
             ),
           ),
         ),
