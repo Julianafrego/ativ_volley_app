@@ -40,7 +40,7 @@ class TeamsBScoreboard extends StatelessWidget {
             TeamBScoreboard(teamName: 'Sparrings', teamScore: 10),
             TeamBScoreboard(teamName: 'Sicranos', teamScore: 10),
             TeamBScoreboard(teamName: 'AutoConvidados', teamScore: 25),
-            TeamBScoreboard(teamName: 'autoconvidados', teamScore: 10),
+            TeamBScoreboard(teamName: 'autoconvidados', teamScore: 5),
           ],
         ));
   }
