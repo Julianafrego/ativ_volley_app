@@ -3,6 +3,7 @@ import 'package:ativ_volley_app/presentation/widgets/results/scoreboard.dart';
 import 'package:flutter/material.dart';
 import 'package:ativ_volley_app/core/system_colors.dart';
 import 'package:ativ_volley_app/core/buttons/return_button.dart';
+import 'package:ativ_volley_app/presentation/widgets/results/statistics_icons.dart';
 
 class ResultsScreen extends StatefulWidget {
   const ResultsScreen({super.key});
@@ -46,14 +47,7 @@ class _ResultsScreenState extends State<ResultsScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           SizedBox(height: screenHeight),
-                          const Icon(Icons.bar_chart,
-                              size: 35, color: Colors.white),
-                          const Icon(Icons.bar_chart,
-                              size: 35, color: Colors.white),
-                          const Icon(Icons.bar_chart,
-                              size: 35, color: Colors.white),
-                          const Icon(Icons.bar_chart,
-                              size: 35, color: Colors.white),
+                          const StatisticsIcons(),
                         ],
                       ),
                     )),
