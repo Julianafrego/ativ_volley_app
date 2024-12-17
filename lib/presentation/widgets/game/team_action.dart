@@ -22,7 +22,7 @@ class TeamActionAWidget extends StatelessWidget {
             actionName,
             style: const TextStyle(
               fontSize: 20,
-              color: Color.fromARGB(255, 43, 108, 119),
+              color: SystemColors.branco,
             ),
           )
         ],
@@ -30,8 +30,6 @@ class TeamActionAWidget extends StatelessWidget {
     );
   }
 }
-
-
 
 class TeamActionBWidget extends StatelessWidget {
   final String actionName;
