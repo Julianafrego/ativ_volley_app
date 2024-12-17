@@ -13,16 +13,16 @@ class AddButton extends StatelessWidget {
       margin: const EdgeInsets.only(left: 7, right: 15),
       child: FloatingActionButton(
         onPressed: onPressed,
-        heroTag: heroTag, 
+        heroTag: heroTag,
         backgroundColor: SystemColors.blue1,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(50), 
+          borderRadius: BorderRadius.circular(50),
         ),
         child: const Text(
           '+',
           style: TextStyle(
             fontSize: 26,
-            color: SystemColors.branco,
+            color: SystemColors.white,
           ),
         ),
       ),

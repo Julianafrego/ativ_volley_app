@@ -7,7 +7,11 @@ class Scoreboard extends StatefulWidget {
   final int pointsB;
   final GameController gameController;
 
-  const Scoreboard({super.key, required this.pointsA, required this.pointsB, required this.gameController});
+  const Scoreboard(
+      {super.key,
+      required this.pointsA,
+      required this.pointsB,
+      required this.gameController});
 
   @override
   State<Scoreboard> createState() => _ScoreboardState();
@@ -16,15 +20,14 @@ class Scoreboard extends StatefulWidget {
 class _ScoreboardState extends State<Scoreboard> {
   @override
   Widget build(BuildContext context) {
-
     return Row(
       children: [
         Flexible(
             child: Container(
           height: 150,
           decoration: BoxDecoration(
-            color: SystemColors.laranja,
-            border: Border.all(width: 2.0, color: SystemColors.branco),
+            color: SystemColors.orange,
+            border: Border.all(width: 2.0, color: SystemColors.white),
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -38,9 +41,7 @@ class _ScoreboardState extends State<Scoreboard> {
                           width: 130,
                           height: 130,
                         )
-                      : const SizedBox(
-                          width: 130,
-                          height: 130), 
+                      : const SizedBox(width: 130, height: 130),
                 ),
               ),
               Flexible(
@@ -49,7 +50,7 @@ class _ScoreboardState extends State<Scoreboard> {
                     widget.pointsA.toString(),
                     style: const TextStyle(
                       fontSize: 60,
-                      color: SystemColors.branco,
+                      color: SystemColors.white,
                     ),
                   ),
                 ),
@@ -61,8 +62,8 @@ class _ScoreboardState extends State<Scoreboard> {
             child: Container(
           height: 150,
           decoration: BoxDecoration(
-            color: SystemColors.laranja,
-            border: Border.all(width: 2.0, color: SystemColors.branco),
+            color: SystemColors.orange,
+            border: Border.all(width: 2.0, color: SystemColors.white),
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -87,7 +88,7 @@ class _ScoreboardState extends State<Scoreboard> {
                     widget.pointsB.toString(),
                     style: const TextStyle(
                       fontSize: 60,
-                      color: SystemColors.branco,
+                      color: SystemColors.white,
                     ),
                   ),
                 ),

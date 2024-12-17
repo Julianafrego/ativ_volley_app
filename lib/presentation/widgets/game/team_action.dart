@@ -22,7 +22,7 @@ class TeamActionAWidget extends StatelessWidget {
             actionName,
             style: const TextStyle(
               fontSize: 20,
-              color: SystemColors.branco,
+              color: SystemColors.white,
             ),
           )
         ],
@@ -48,7 +48,7 @@ class TeamActionBWidget extends StatelessWidget {
             actionName,
             style: const TextStyle(
               fontSize: 20,
-              color: SystemColors.branco,
+              color: SystemColors.white,
             ),
           ),
           AddButton(

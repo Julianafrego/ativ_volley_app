@@ -13,21 +13,19 @@ class TeamAScoreboard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     final Color scoreColor =
         teamScore == 25 ? SystemColors.blue1 : SystemColors.yellow;
 
     return Row(
-       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
-            teamName,
-            style: const TextStyle(
-              fontSize: 20,
-              color: SystemColors.branco,
-            ),
+          teamName,
+          style: const TextStyle(
+            fontSize: 20,
+            color: SystemColors.white,
           ),
-        
+        ),
         Text(
           teamScore.toString(),
           style: TextStyle(
@@ -56,21 +54,20 @@ class TeamBScoreboard extends StatelessWidget {
         teamScore == 25 ? SystemColors.blue1 : SystemColors.yellow;
 
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween, 
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
-            teamScore.toString(),
-            style: TextStyle(
-              fontSize: 24,
-              color: scoreColor,
-            ),
+          teamScore.toString(),
+          style: TextStyle(
+            fontSize: 24,
+            color: scoreColor,
           ),
-        
+        ),
         Text(
           teamName,
           style: const TextStyle(
             fontSize: 20,
-            color: SystemColors.branco,
+            color: SystemColors.white,
           ),
         ),
       ],

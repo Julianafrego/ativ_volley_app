@@ -7,13 +7,13 @@ class ResultsFooter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width, 
-      padding: const EdgeInsets.only(top: 9.0), 
+      width: MediaQuery.of(context).size.width,
+      padding: const EdgeInsets.only(top: 9.0),
       decoration: BoxDecoration(
         color: SystemColors.blue3,
         shape: BoxShape.rectangle,
         border: Border.all(
-          color: SystemColors.branco,
+          color: SystemColors.white,
           width: 2,
         ),
       ),
@@ -21,45 +21,49 @@ class ResultsFooter extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16.0), 
-            child: 
-            Row ( children: [
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            child: Row(
+              children: [
                 Text(
-              'Sicranos: ',
-              style: TextStyle(fontSize: 24, color: SystemColors.branco),
+                  'Sicranos: ',
+                  style: TextStyle(fontSize: 24, color: SystemColors.white),
+                ),
+                Text(
+                  '10',
+                  style: TextStyle(fontSize: 24, color: SystemColors.blue1),
+                ),
+              ],
             ),
-             Text(
-              '10',
-              style: TextStyle(fontSize: 24, color: SystemColors.blue1),
-            ),
-            ],),
-           
           ),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16.0), 
-            child:  Row ( children: [
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            child: Row(
+              children: [
                 Text(
-              'Autoconvidados: ',
-              style: TextStyle(fontSize: 24, color: SystemColors.branco),
+                  'Autoconvidados: ',
+                  style: TextStyle(fontSize: 24, color: SystemColors.white),
+                ),
+                Text(
+                  '10',
+                  style: TextStyle(fontSize: 24, color: SystemColors.blue1),
+                ),
+              ],
             ),
-             Text(
-              '10',
-              style: TextStyle(fontSize: 24, color: SystemColors.blue1),
-            ),
-            ],),
           ),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16.0), 
-            child:  Row ( children: [
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            child: Row(
+              children: [
                 Text(
-              'Ziraldos: ',
-              style: TextStyle(fontSize: 24, color: SystemColors.branco),
+                  'Ziraldos: ',
+                  style: TextStyle(fontSize: 24, color: SystemColors.white),
+                ),
+                Text(
+                  '3',
+                  style: TextStyle(fontSize: 24, color: SystemColors.blue1),
+                ),
+              ],
             ),
-             Text(
-              '3',
-              style: TextStyle(fontSize: 24, color: SystemColors.blue1),
-            ),
-            ],),
           ),
         ],
       ),
